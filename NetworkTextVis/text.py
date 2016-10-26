@@ -1,9 +1,13 @@
-import gensim, numpy, math
+import gensim
+import numpy
+import math
+import networkx
 from sklearn.feature_extraction.text import CountVectorizer
 import regex as re
 from HTMLParser import HTMLParser
-from pprint import pprint
 import logging
+from ranking import graph_influence
+
 
 logger = logging.getLogger('universal_logger')
 
@@ -303,8 +307,7 @@ def update_graph_topics(graph, docs, config):
     """
 
 
-    from ranking import graph_influence
-    import networkx
+
 
     document_topic, document_topic_old, document_term, vocab, probable_words = nfm_extraction(docs, config)
     topic_representations = find_words_per_topic(vocab, document_topic_old, document_term, config)
