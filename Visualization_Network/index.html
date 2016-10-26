@@ -1,0 +1,1099 @@
+<!doctype html> <html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Network Topic Users</title>
+
+  <link rel="stylesheet" href="styles/1.11.4-jquery-ui.css">
+  <script src="/plugins/js/jquery-1.10.2.js"></script>
+  <script src="/plugins/js/1.11.4-jquery-ui.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="styles/gexfjs.css" />
+  <link rel="stylesheet" href="./fonts/font-awesome.css">
+
+  <!--<link rel="stylesheet" type="text/css" href="styles/jquery-ui.css" />
+  <link rel="stylesheet" type="text/css" href="styles/awesomplete.css" />-->
+
+
+  <!-- START SIGMA IMPORTS -->
+  <script src="/src/sigma.core.js"></script>
+  <script src="/src/conrad.js"></script>
+  <script src="/src/utils/sigma.utils.js"></script>
+  <script src="/src/utils/sigma.polyfills.js"></script>
+  <script src="/src/sigma.settings.js"></script>
+  <script src="/src/classes/sigma.classes.dispatcher.js"></script>
+  <script src="/src/classes/sigma.classes.configurable.js"></script>
+  <script src="/src/classes/sigma.classes.graph.js"></script>
+  <script src="/src/classes/sigma.classes.camera.js"></script>
+  <script src="/src/classes/sigma.classes.quad.js"></script>
+  <script src="/src/captors/sigma.captors.mouse.js"></script>
+  <script src="/src/captors/sigma.captors.touch.js"></script>
+  <script src="/src/renderers/sigma.renderers.canvas.js"></script>
+  <script src="/src/renderers/sigma.renderers.webgl.js"></script>
+  <script src="/src/renderers/sigma.renderers.svg.js"></script>
+  <script src="/src/renderers/sigma.renderers.def.js"></script>
+  <script src="/src/renderers/webgl/sigma.webgl.nodes.def.js"></script>
+  <script src="/src/renderers/webgl/sigma.webgl.nodes.fast.js"></script>
+  <script src="/src/renderers/webgl/sigma.webgl.edges.def.js"></script>
+  <script src="/src/renderers/webgl/sigma.webgl.edges.fast.js"></script>
+  <script src="/src/renderers/webgl/sigma.webgl.edges.arrow.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.labels.def.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.hovers.def.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.nodes.def.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.edges.def.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.edges.curve.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.edges.arrow.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.edges.curvedArrow.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.edgehovers.def.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.edgehovers.curve.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.edgehovers.arrow.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.edgehovers.curvedArrow.js"></script>
+  <script src="/src/renderers/canvas/sigma.canvas.extremities.def.js"></script>
+  <script src="/src/renderers/svg/sigma.svg.utils.js"></script>
+  <script src="/src/renderers/svg/sigma.svg.nodes.def.js"></script>
+  <script src="/src/renderers/svg/sigma.svg.edges.def.js"></script>
+  <script src="/src/renderers/svg/sigma.svg.edges.curve.js"></script>
+  <script src="/src/renderers/svg/sigma.svg.edges.curvedArrow.js"></script>
+  <script src="/src/renderers/svg/sigma.svg.labels.def.js"></script>
+  <script src="/src/renderers/svg/sigma.svg.hovers.def.js"></script>
+  <script src="/src/middlewares/sigma.middlewares.rescale.js"></script>
+  <script src="/src/middlewares/sigma.middlewares.copy.js"></script>
+  <script src="/src/misc/sigma.misc.animation.js"></script>
+  <script src="/src/misc/sigma.misc.bindEvents.js"></script>
+  <script src="/src/misc/sigma.misc.bindDOMEvents.js"></script>
+  <script src="/src/misc/sigma.misc.drawHovers.js"></script>
+  <!-- END SIGMA IMPORTS -->
+
+  <!-- Tooltip -->
+  <script src="/plugins/sigma.plugins.tooltips/sigma.plugins.tooltips.js"></script>
+  <!-- Edges? -->
+  <script src="/plugins/sigma.helpers.graph/sigma.helpers.graph.js"></script>
+  <script src="/plugins/sigma.renderers.edgeLabels/settings.js"></script>
+  <script src="/plugins/sigma.renderers.edgeLabels/sigma.canvas.edges.labels.def.js"></script>
+  <script src="/plugins/sigma.renderers.edgeLabels/sigma.canvas.edges.labels.curve.js"></script>
+  <script src="/plugins/sigma.renderers.edgeLabels/sigma.canvas.edges.labels.curvedArrow.js"></script>
+  <script src="/plugins/sigma.renderers.linkurious/canvas/sigma.canvas.edges.dashed.js"></script>
+  <script src="/plugins/sigma.renderers.linkurious/canvas/sigma.canvas.edges.dotted.js"></script>
+  <script src="/plugins/sigma.renderers.linkurious/canvas/sigma.canvas.edges.parallel.js"></script>
+  <script src="/plugins/sigma.renderers.linkurious/canvas/sigma.canvas.edges.tapered.js"></script>
+  <script src="/plugins/sigma.renderers.linkurious/canvas/sigma.canvas.edgehovers.dashed.js"></script>
+  <script src="/plugins/sigma.renderers.linkurious/canvas/sigma.canvas.edgehovers.dotted.js"></script>
+  <script src="/plugins/sigma.renderers.linkurious/canvas/sigma.canvas.edgehovers.parallel.js"></script>
+  <script src="/plugins/sigma.renderers.linkurious/canvas/sigma.canvas.edgehovers.tapered.js"></script>
+  <!-- Gexf Parsers -->
+  <script src="/plugins/sigma.parsers.gexf/sigma.parsers.gexf.js"></script>
+  <script src="/plugins/sigma.parsers.gexf/gexf-parser.js"></script>
+  <!--<script src="/plugins/jquery-1.11.3.min.js"></script>
+  <script src="/plugins/jquery-ui.js"></script>
+  <script src="/plugins/jquery.mobile-1.4.5.min.js"></script>-->
+  <script src="/plugins/js/0.8.1-mustache.min.js"></script>
+  <!-- Filters -->
+  <script src="/plugins/sigma.plugins.filter/sigma.plugins.filter.js"></script>
+  <!-- RGBtoName -->
+  <script src="/plugins/js/tinycolor.js"></script>
+  <!-- Searchbar -->
+  <script src="/plugins/sigma.plugins.locate/sigma.plugins.locate.js"></script>
+  <script type="text/javascript" src="/plugins/js/d3.min.js"></script>
+  <!--<script type="text/javascript" src="/plugins/d3.min.js"></script>
+  <script src="/plugins/sigma.plugins.locate/sigma.plugins.locate.js"></script>
+  <script src="/plugins/jquery-1.12.0.min.js"></script>
+  <script src="/plugins/jquery.autocomplete.min.js"></script>
+
+  <script src="/plugins/awesomplete.js"></script>
+  <script type="text/javascript" src="/plugins/jquery.mousewheel.min.js"></script>
+  <script type="text/javascript" src="/plugins/jquery-ui-1.8.16.custom.min.js"></script>
+  <script type="text/javascript" src="/plugins/gexfjs.js"></script>-->
+
+
+
+
+</head>
+<body>
+<div id="container">
+  <style>
+    
+    body {
+      color: #333;
+      font-size: 14px;
+      font-family: Lato, sans-serif;
+    }
+    #graph-container {
+      top: 45px;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      position: absolute;
+    }
+
+    .sigma-tooltip {
+      max-width: 240px;
+      max-height: 240px;
+      background-color: rgb(249, 247, 237);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      border-radius: 6px;
+      overflow:auto;
+    }
+
+    .sigma-tooltip-header {
+      font-variant: small-caps;
+      font-size: 120%;
+      color: #437356;
+      border-bottom: 1px solid #aac789;
+      padding: 10px;
+    }
+
+    .sigma-tooltip-body {
+      padding: 10px;
+    }
+
+    .sigma-tooltip-body th {
+      color: #999;
+      text-align: left;
+    }
+
+    .sigma-tooltip-footer {
+      padding: 10px;
+      border-top: 1px solid #aac789;
+    }
+
+    .sigma-tooltip > .arrow {
+      border-width: 10px;
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      border-color: transparent;
+      border-style: solid;
+    }
+
+    .sigma-tooltip.top {
+      margin-top: -12px;
+    }
+    .sigma-tooltip.top > .arrow {
+      left: 50%;
+      bottom: -10px;
+      margin-left: -10px;
+      border-top-color: rgb(249, 247, 237);
+      border-bottom-width: 0;
+    }
+
+    .sigma-tooltip.bottom {
+      margin-top: 12px;
+    }
+    .sigma-tooltip.bottom > .arrow {
+      left: 50%;
+      top: -10px;
+      margin-left: -10px;
+      border-bottom-color: rgb(249, 247, 237);
+      border-top-width: 0;
+    }
+
+    .sigma-tooltip.left {
+      margin-left: -12px;
+    }
+    .sigma-tooltip.left > .arrow {
+      top: 50%;
+      right: -10px;
+      margin-top: -10px;
+      border-left-color: rgb(249, 247, 237);
+      border-right-width: 0;
+    }
+
+    .sigma-tooltip.right {
+      margin-left: 12px;
+    }
+    .sigma-tooltip.right > .arrow {
+      top: 50%;
+      left: -10px;
+      margin-top: -10px;
+      border-right-color: rgb(249, 247, 237);
+      border-left-width: 0;
+    }
+    #control-pane {
+      top: 55px;
+      /*bottom: 10px;*/
+      right: 20px;
+      position: absolute;
+      width: 280px;
+      background-color: rgb(249, 247, 237);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      overflow-x:auto;
+    }
+    #control-pane > div {
+      margin: 10px;
+      overflow-x: auto;
+    }
+    .line {
+      clear: both;
+      display: block;
+      width: 100%;
+      margin: 0;
+      padding: 12px 0 0 0;
+      border-bottom: 1px solid #aac789;
+      background: transparent;
+    }
+    h2, h3, h4 {
+      padding: 0;
+      font-variant: small-caps;
+    }
+    .green {
+      color: #437356;
+    }
+    h2.underline {
+      color: #437356;
+      background: #f4f0e4;
+      margin: 0;
+      border-radius: 2px;
+      padding: 8px 12px;
+      font-weight: 700;
+    }
+    .hidden {
+      display: none;
+      visibility: hidden;
+    }
+
+    input[type=range] {
+      width: 160px;
+    }
+
+    #zoomReset {
+      position: fixed;
+      left: 1%;
+      bottom: 25px;
+      width: 43px;
+      height: 30px;
+    }
+
+    #star{
+      display: inline-block;
+      float: right;
+
+  </style>
+  <div id="titlebar">
+            <div id="maintitle">
+                <h1><a  target="_blank" title="Graph made with Gephi. Visualization with Linkurious/Sigmajs.">Gephi: JavaScript GEXF Viewer</a></h1>
+            </div>
+            <div class="ui-widget" id="recherce">
+              <input id="searchinput" autocomplete="on"/>
+              <input id="searchsubmit" type="submit" onclick="search1(s,locate);"/>
+            </div>
+            <!--Gexf-->
+            <!--<form id="recherche">
+                <input id="searchinput" class="grey" autocomplete="off" />
+                <input id="searchsubmit" type="submit" />
+            </form><!---->
+            <!--<div id="recherche">
+              <form>
+                <input type="text" class="grey" id="searchinput" />
+                <input id="searchsubmit" type="submit" />
+              </form>
+            </div><!---->
+            <!--awesomplete-->
+            <!--<input id="myinput" />-->
+            <!--<div id="searchfield">
+              <form><input type="text" class="biginput" id="autocomplete"></form>
+            </div><!-- @end #searchfield -->
+            <div id="title"> 
+              <img id="helpIcon" 
+                src="img/help-question-48.png" title="Click for help" 
+                onClick="toggleDiv('help');"/>
+            </div>
+        </div>
+        <div id="help" class="panel_off">
+      <img src="img/close.png" style="float: right;" 
+           onClick="toggleDiv('help');"/>
+      Influential Users Network.
+
+      <ul>
+
+		<li>Showing the <b>Top 2000</b> Most Influential Users of the network.</li>
+        <li>Hover over a node to see User Name and the User profile.</li>
+        
+        <li>Each User is colored according to one of the different topics extracted and the node radius is proportional to the User's influence.</li>
+
+        <li>The User profile provides details, such as influence and the topic words of their most discussed topic. 
+        It will open up a tooltip.</li>
+
+        <li>Navigate through panning and mousewheel-zoom. If you zoom in when centered on a User, the
+        graph will expand around it.</li>
+
+        <li>You can also search for a specific User label using the search bar at the top.</li>
+
+        <li>Bottom left button is for zooming out and centering the graph.</li>
+
+        <li>Finally, apply filters matching your criteria on the attributes listed in the side panel. 
+        If you want, to reset the filters click on reset-button.</li>
+      </ul>
+      For additional information, check the <strong><a href="http://revealproject.eu/" target="_blank">Reveal Project HomePage</a></strong>.
+    </div>
+        <!--<ul id="autocomplete">
+        </ul><!---->
+  <div id="graph-container"></div>
+  <div id="control-pane">
+    <!--<h2 class="underline">filters</h2>
+    <p>
+      <label for="amount">Price range:</label>
+      <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
+    </p>
+    <div id="slider-range"></div>-->
+    <div>
+      <h3>User Influence <span id="min-inf-val">0</span></h3>
+      0 <input id="min-inf" type="range" min="0" max="0" value="0"> <span id="max-inf-value">0</span><br>
+    </div>
+    <div>
+      <h3>Betweeness Centrality <span id="min-bc-val">0</span></h3>
+      0 <input id="min-bc" type="range" min="0" max="0" value="0"> <span id="max-bc-value">0</span><br>
+    </div>
+    <!--<div>
+      <h3>Char category</h3>
+      <select id="char-category">
+        <option value="" selected>All categories</option>
+      </select>
+    </div>-->
+    <!--<div>
+      <h3>Gender category</h3>
+      <select id="gender-category">
+        <option value="" selected>Both genders</option>
+      </select>
+    </div>-->
+    <div>
+      <h3>Group by Topic</h3>
+      <select id="comm-category">
+        <option value="" selected>All topics</option>
+      </select>
+    </div>
+    <span class="line"></span>
+    <div>
+      <button id="reset-btn">Reset filters</button>
+      <button type="button" class="btn btn-default" id="zoomReset" title="Zoom Reset" onclick="zoomCenter()"><i class="fa fa-compass"></i></button> 
+    </div>
+    <div id="dump" class="hidden"></div>
+  </div>
+</div>
+<script>
+
+
+
+/**
+ * This is an example on how to use node tooltips based on a random graph.
+ */
+var i,
+    s,
+    N = 100,
+    E = 500,
+    g = {
+      nodes: [],
+      edges: []
+    };
+
+//Range Slider
+  /*$(function() {
+    $( "#slider-range" ).slider({
+      range: true,
+      min: 0,
+      max: 500,
+      values: [ 0, 300 ],
+      slide: function( event, ui ) {
+        $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+      }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+  });*/
+
+var settings1 = {
+
+  //Edges
+  defaultEdgeType: 'curve',
+  edgeLabelThreshold: 3,
+  minEdgeSize: 0.1,
+  maxEdgeSize: 0.2,
+  defaultEdgeColor:"#585858",
+  
+  //Zoom
+  zoomMin: 0.0001,
+  zoomMax: 2,
+  nodesPowRatio: 0.2,
+  edgesPowRatio: 0.2,
+  
+  //Nodes
+  LabelSize: 'proportional',
+
+};
+
+
+var settings2 = {
+      /**
+       * RENDERERS SETTINGS:
+       * *******************
+       */
+      defaultEdgeType: 'curved', // require sigma.renderers.customEdgeShapes
+
+      // Labels:
+      font: 'robotoregular', // Helvetica is fine too
+      defaultLabelColor: '#2e2c2d',
+      defaultLabelSize: 12,
+      labelThreshold: 5,
+      defaultEdgeLabelSize: 12,
+      edgeLabelThreshold: 7,
+      labelHoverShadow: '',
+
+      // Edges:
+      edgeColor: 'default',
+      defaultEdgeColor: '#a9a9a9',
+
+      // Nodes:
+      defaultNodeColor: '#333333',
+
+      // Hovered nodes:
+      hoverFontStyle: 'bold',
+      borderSize: 2,
+      outerBorderSize: 2,
+      nodeBorderColor: 'default',
+      defaultNodeBorderColor: '#ffffff',
+      defaultNodeOuterBorderColor: '#f65565',
+
+      // Actve nodes and edges:
+      activeFontStyle: 'bold',
+      nodeActiveColor: 'node',
+      defaultNodeActiveColor: '#333333',
+      edgeActiveColor: 'default',
+      defaultEdgeActiveColor: '#f65565',
+      edgeHoverExtremities: true,
+
+      /**
+       * RESCALE SETTINGS:
+       * *****************
+       */
+      minNodeSize: 1,
+      maxNodeSize: 3,
+      minEdgeSize: 1,
+      maxEdgeSize: 2,
+
+      /**
+       * CAPTORS SETTINGS:
+       * *****************
+       */
+      zoomingRatio: 1.382,
+      doubleClickZoomingRatio: 1,
+      zoomMin: 0.05,
+      zoomMax: 20,
+      doubleClickZoomDuration: 0,
+
+      /**
+       * GLOBAL SETTINGS:
+       * ****************
+       */
+      autoRescale: ['nodeSize', 'edgeSize'],
+      doubleClickEnabled: false,
+      enableEdgeHovering: true,
+      edgeHoverPrecision: 10,
+
+      /**
+       * CAMERA SETTINGS:
+       * ****************
+       */
+      nodesPowRatio: 0.8,
+      edgesPowRatio: 0.8,
+
+      /**
+       * ANIMATIONS SETTINGS:
+       * ********************
+       */
+      animationsTime: 800
+};
+
+// Generate a random graph:
+/*for (i = 0; i < N; i++)
+  g.nodes.push({
+    id: 'n' + i,
+    label: 'Node ' + i,
+    x: Math.random(),
+    y: Math.random(),
+    size: Math.random(),
+    color: '#666',
+    data: {
+      name: 'Jean',
+      gender: 'Male',
+      age: 28,
+      city: 'Paris'
+    }
+  });
+
+for (i = 0; i < E; i++)
+  g.edges.push({
+    id: 'e' + i,
+    source: 'n' + (Math.random() * N | 0),
+    target: 'n' + (Math.random() * N | 0),
+    size: Math.random(),
+    color: '#ccc'
+  });*/
+
+// Instanciate sigma:
+
+/**
+ * This is an example on how to use sigma filters plugin on a real-world graph.
+ */
+var filter;
+
+/**
+ * DOM utility functions
+ */
+var _ = {
+  $: function (id) {
+    return document.getElementById(id);
+  },
+
+  all: function (selectors) {
+    return document.querySelectorAll(selectors);
+  },
+
+  removeClass: function(selectors, cssClass) {
+    var nodes = document.querySelectorAll(selectors);
+    var l = nodes.length;
+    for ( i = 0 ; i < l; i++ ) {
+      var el = nodes[i];
+      // Bootstrap compatibility
+      el.className = el.className.replace(cssClass, '');
+    }
+  },
+
+  addClass: function (selectors, cssClass) {
+    var nodes = document.querySelectorAll(selectors);
+    var l = nodes.length;
+    for ( i = 0 ; i < l; i++ ) {
+      var el = nodes[i];
+      // Bootstrap compatibility
+      if (-1 == el.className.indexOf(cssClass)) {
+        el.className += ' ' + cssClass;
+      }
+    }
+  },
+
+  show: function (selectors) {
+    this.removeClass(selectors, 'hidden');
+  },
+
+  hide: function (selectors) {
+    this.addClass(selectors, 'hidden');
+  },
+
+  toggle: function (selectors, cssClass) {
+    var cssClass = cssClass || "hidden";
+    var nodes = document.querySelectorAll(selectors);
+    var l = nodes.length;
+    for ( i = 0 ; i < l; i++ ) {
+      var el = nodes[i];
+      //el.style.display = (el.style.display != 'none' ? 'none' : '' );
+      // Bootstrap compatibility
+      if (-1 !== el.className.indexOf(cssClass)) {
+        el.className = el.className.replace(cssClass, '');
+      } else {
+        el.className += ' ' + cssClass;
+      }
+    }
+  }
+};
+
+  // Initialize filter param
+var maxBC = 0,
+  maxInf = 0,
+  //char_cat = {};
+  //gender_cat = {};
+  comm_cat = {};
+  color2word = {};
+  // names to save
+  fav_names = [];
+
+
+function updatePane (graph, filter) {
+
+  // Fill filter categories
+  graph.nodes().forEach(function(n) {
+    //maxDegree = Math.max(maxDegree, graph.degree(n.id));
+    maxBC = Math.max(maxBC, +n.attributes["betweenesscentrality"]);
+    maxInf = Math.max(maxInf, +n.attributes["mean_infl"]);
+    //char_cat[n.attributes.char] = true;
+    //gender_cat[n.attributes.gender] = true;
+    comm_cat[n.color] = true;
+    color2word[n.color] = n.attributes.topic_repr;
+
+    //'<div style="width:40px;height:12px;border:1px solid #fff;background:' + tinycolor(n.color).toRGB() + ';display:inline-block"></div>
+  })
+  //window.alert(maxBC);
+  // min degree
+  _.$('min-bc').max = (maxBC*100/maxBC).toFixed(2);
+  _.$('max-bc-value').textContent = (maxBC*100/maxBC).toFixed(2);
+
+  //min infl
+  _.$('min-inf').max = (maxInf*100/maxInf).toFixed(2);
+  _.$('max-inf-value').textContent = (maxInf*100/maxInf).toFixed(2);
+
+  /*// char category
+  var charcategoryElt = _.$('char-category');
+  Object.keys(char_cat).forEach(function(c) {
+    var charoptionElt = document.createElement("option");
+    charoptionElt.text = c;
+    charcategoryElt.add(charoptionElt);
+  });*/
+
+  // gender category
+  /*var gendercategoryElt = _.$('gender-category');
+  Object.keys(gender_cat).forEach(function(c) {
+    var genderoptionElt = document.createElement("option");
+    genderoptionElt.text = c;
+    gendercategoryElt.add(genderoptionElt);
+  });*/
+
+   // comm category
+  var commcategoryElt = _.$('comm-category');
+  var x = 1
+  Object.keys(comm_cat).forEach(function(c) {
+
+    var commoptionElt = document.createElement("option");
+    commoptionElt.value = c;
+    commoptionElt.innerHTML = '<div style="line-height:12px"><div style="width:12px;height:12px;border:1px solid #fff;background:#' + tinycolor(c).toHex() + ';display:inline-block"></div> ' + color2word[c] + '</div>';
+    commcategoryElt.add(commoptionElt);
+    //commcategoryElt.add('<div style="width:40px;height:12px;border:1px solid #fff;background:#' + tinycolor(c).toHex() + ';display:inline-block"></div>');
+  });
+
+
+  // reset button
+  _.$('reset-btn').addEventListener("click", function(e) {
+    _.$('min-bc').value = 0;
+    _.$('min-bc-val').textContent = '0';
+    _.$('min-inf').value = 0;
+    _.$('min-inf-val').textContent = '0';
+    //_.$('char-category').selectedIndex = 0;
+    //_.$('gender-category').selectedIndex = 0;
+    _.$('comm-category').selectedIndex = 0;
+    filter.undo().apply();
+    _.$('dump').textContent = '';
+    _.hide('#dump');
+  });
+
+}
+
+// create false start
+s = new sigma({
+  graph: g,
+  renderer: {
+    container: document.getElementById('graph-container'),
+    type: 'canvas'
+  },
+  settings: settings1
+});
+/*$('#autocomplete').autocomplete({
+    lookup: s.graph.nodes().map(function(n){return n.label;}),
+    onSelect: function (suggestion) {
+        alert('You selected: ' + suggestion.value);
+    }
+});*/
+
+  
+
+/*$(function() {
+    $("#searchinput").autocomplete({
+        source: s.graph.nodes().map(function(n){return n.label;})
+    }).data("autocomplete")._renderItem = function(ul, item) {
+        return $("<li>").data("item.autocomplete", item).append("<a>" + item + "</a>").appendTo(ul);
+    };
+});*/
+
+
+var locate = sigma.plugins.locate(s, {
+  // ANIMATION SETTINGS:
+  // **********
+  animation: {
+    node: {
+      duration: 300
+    },
+    edge: {
+      duration: 300
+    },
+    center: {
+      duration: 300
+    }
+  },
+  // PADDING:
+  padding: {
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0
+  },
+  // GLOBAL SETTINGS:
+  // **********
+  focusOut: true,
+  zoomDef:  0
+});
+
+
+var keyword = 'assesment_id';
+var file_name = getParameterByName(keyword);
+var public_dir = './data/';
+file_name = file_name.replace("/","");
+
+
+//Update with real data
+sigma.parsers.gexf(
+  //'./data/snow_100_open_per_topic_bc.gexf',
+  //'./data/final_gexf.gexf',
+  //'./data/io_gexf.gexf',
+  public_dir + file_name + '.gexf',
+  s,
+  function() {
+    s.refresh();
+  // Initialize the Filter API
+  filter = sigma.plugins.filter(s);
+  //awesomplete.list = s.graph.nodes().map(function(n) {return n.label;})
+  updatePane(s.graph, filter);
+
+  $(function() {
+      names_temp = s.graph.nodes().map(function(n){return n.label;});
+      //GIA TO PALIO
+      //topic_temp = s.graph.nodes().map(function(n){return n.attributes.topic_words.split(" ");});
+      //GIA TO KANONIKO MESW JAVA
+      topic_temp = s.graph.nodes().map(function(n){return n.attributes.topic_full.split(" ");});
+      topic_temp = [].concat.apply([], topic_temp);
+      topic_temp = topic_temp.filter(onlyUnique);
+      $( "#searchinput" ).autocomplete({
+        source: names_temp,
+        //source: names_temp.concat(topic_temp),
+        //select: search1(s, locate)
+        select: function(e, ui) {
+            search2(s, locate, ui);
+            //alert(ui.item.label);
+    }
+      });
+    });
+
+  /*// Min-degree filter
+  function applyMinDegreeFilter(e) {
+    var v = e.target.value;
+    _.$('min-degree-val').textContent = v;
+
+    filter
+      .undo('min-degree')
+      .nodesBy(
+        function(n, options) {
+          return this.graph.degree(n.id) >= options.minDegreeVal;
+        },
+        {
+          minDegreeVal: +v
+        },
+        'min-degree'
+      )
+      .apply();
+  }*/
+
+  //Min-BC filter
+  function applyMinBCFilter(e) {
+    var v = e.target.value;
+    _.$('min-bc-val').textContent = v;
+
+    filter
+      .undo('min-bc')
+      .nodesBy(
+        function(n, options) {
+          return n.attributes["betweenesscentrality"]*100/maxBC >= options.minBC;
+        },
+        {
+          minBC: +v
+        },
+        'min-bc'
+      )
+      .apply();
+  }
+
+  //Min-inf filter
+  function applyMinInfFilter(e) {
+    var v = e.target.value;
+    _.$('min-inf-val').textContent = v;
+
+    filter
+      .undo('min-inf')
+      .nodesBy(
+        function(n, options) {
+          return n.attributes["mean_infl"]*100/maxInf >= options.minInfVal;
+        },
+        {
+          minInfVal: +v
+        },
+        'min-inf'
+      )
+      .apply();
+  }
+  
+  // Category filter
+  function applyCharFilter(e) {
+    var c = e.target[e.target.selectedIndex].value;
+    filter
+      .undo('char-category')
+      .nodesBy(
+        function(n, options) {
+          return !c.length || n.attributes[options.property] === c;
+        },
+        {
+          property: 'char'
+        },
+        'char-category'
+      )
+      .apply();
+  }
+
+ /* function applyGenderFilter(e) {
+    var c = e.target[e.target.selectedIndex].value;
+    filter
+      .undo('gender-category')
+      .nodesBy(
+        function(n, options) {
+          return !c.length || n.attributes[options.property] === c;
+        },
+        {
+          property: 'gender'
+        },
+        'gender-category'
+      )
+      .apply();
+  }*/
+
+  /*function applyCommFilter(e) {
+    var c = e.target[e.target.selectedIndex].value;
+    filter
+      .undo('comm-category')
+      .nodesBy(
+        function(n, options) {
+          return !c.length || n.attributes[options.property] === c;
+        },
+        {
+          property: 'modularity_class'
+        },
+        'comm-category'
+      )
+      .apply();
+  }*/
+  function applyCommFilter(e) {
+    var rgb_string = e.target[e.target.selectedIndex].value;
+    filter
+      .undo('comm-category')
+      .nodesBy(
+        function(n, options) {
+          return !rgb_string.length || n[options.property] === rgb_string;
+        },
+        {
+          property: 'color'
+        },
+        'comm-category'
+      )
+      .apply();
+  }
+
+
+
+  _.$('min-bc').addEventListener("input", applyMinBCFilter);  // for Chrome and FF
+  _.$('min-bc').addEventListener("change", applyMinBCFilter); // for IE10+, that sucks
+  _.$('min-inf').addEventListener("input", applyMinInfFilter);  // for Chrome and FF
+  _.$('min-inf').addEventListener("change", applyMinInfFilter); // for IE10+, that sucks
+  //_.$('char-category').addEventListener("change", applyCharFilter);
+  //_.$('gender-category').addEventListener("change", applyGenderFilter);
+  _.$('comm-category').addEventListener("change", applyCommFilter);
+  _.$('searchsubmit').addEventListener("click", search1(s, locate));
+  _.$('searchinput').addEventListener("select", search1(s, locate));
+  _.$('zoomReset').addEventListener("click", zoomCenter);
+});
+
+/*s = new sigma({
+  graph: g,
+  container: 'graph-container',
+  settings: { zoomMin: 0.05, zoomMax: 100,     defaultEdgeType: 'curve' }
+});*/
+
+/*s = new sigma({})
+
+sigma.parsers.gexf(
+  './data/snow_100_open_per2.gexf',
+  { container: 'graph-container' ,
+    settings: { zoomMin: 0.05, zoomMax: 100, defaultEdgeType: 'curve'}
+  },
+  function(gg){
+    s = gg;
+  }
+  );*/
+
+  
+
+
+var config = {
+  node: {
+    show: 'hovers',
+    hide: 'hovers',
+    cssClass: 'sigma-tooltip',
+    //position: 'top',
+    //autoadjust: true,
+    template:
+    '<div class="arrow"></div>' +
+    ' <div class="sigma-tooltip-header">{{label}}' +
+    ' <div id="star" title="Add to Favorites" onclick="togglefav(this,  \'{{label}}\')"><i class="{{star}}"></i></div>'+
+    ' </div>' +
+    '  <div class="sigma-tooltip-body">' +
+    '    <table>' +
+    '      <tr><th>Name</th> <td>{{label}}</td></tr>' +
+    '      <tr><th>Id</th> <td>{{id}}</td></tr>' +
+    //'      <tr><th>Gender</th> <td>{{attributes.gender}}</td></tr>' +
+    //'      <tr><th>Char Type</th> <td>{{attributes.char}}</td></tr>' +
+    //'      <tr><th>Topic Id</th> <td>{{attributes.topic_id}}</td></tr>' +
+    '      <tr><th>Topic Full</th> <td>{{attributes.topic_full}}</td></tr>' +
+    '      <tr><th>Mean Infl</th> <td>{{mean_infl}}</td></tr>' +
+    /*'      <tr><th>Period 1</th> <td>{{period_1}}</td></tr>' +    
+    '      <tr><th>Period 2</th> <td>{{period_2}}</td></tr>' +    
+    '      <tr><th>Period 3</th> <td>{{period_3}}</td></tr>' +    
+    '      <tr><th>Period 4</th> <td>{{period_4}}</td></tr>' +    
+    '      <tr><th>Period 5</th> <td>{{period_5}}</td></tr>' +    
+    '      <tr><th>Period 6</th> <td>{{period_6}}</td></tr>' +    
+    '      <tr><th>Period 7</th> <td>{{period_7}}</td></tr>' +    
+    '      <tr><th>Period 8</th> <td>{{period_8}}</td></tr>' + */   
+    '    </table>' +
+    '  </div>' +
+    '  <div class="sigma-tooltip-footer">Number of connections: {{degree}}</div>',
+    renderer: function(node, template) {
+      // The function context is s.graph
+      node.degree = this.degree(node.id);
+      node.mean_infl = node.attributes['mean_infl']*100/maxInf;
+      node.name_4_save = String(node.label);
+      if ( (fav_names.indexOf(node.label)==-1) || (fav_names.length==0)) {
+          node.star = 'fa fa-plus-circle' ;
+      } else {
+          node.star = 'fa fa-minus-circle' ;
+      }
+      //node.topic_id = node.attributes["topic_id"]
+      node.modularity_class = node.attributes.modularity_class
+      node.period_1 = node.attributes["period 1"]
+      node.period_2 = node.attributes["period 2"]
+      node.period_3 = node.attributes["period 3"]
+      node.period_4 = node.attributes["period 4"]
+      node.period_5 = node.attributes["period 5"]
+      node.period_6 = node.attributes["period 6"]
+      node.period_7 = node.attributes["period 7"]
+      node.period_8 = node.attributes["period 8"]
+      // Returns an HTML string:
+      return Mustache.render(template, node);
+
+      // Returns a DOM Element:
+      //var el = document.createElement('div');
+      //return el.innerHTML = Mustache.render(template, node);
+    }
+  }
+};
+
+// Instanciate the tooltips plugin with a Mustache renderer for node tooltips:
+var tooltips = sigma.plugins.tooltips(s, s.renderers[0], config);
+
+function search2(s,locate, ui){
+    var val = ui.item.label;
+    var nodes = s.graph.nodes()
+    var node = nodes.filter(function(n) {return n.label==val})[0]
+    if (!node){
+      console.log(val);
+      locate.center(1);
+    }else{
+      console.log(val);
+      locate.nodes(node.id);
+      //tooltips.open(node, config)  
+    }
+
+
+  }
+
+
+
+function search1(s,locate){
+    var val = document.getElementById("searchinput").value;
+    var nodes = s.graph.nodes()
+    var node = nodes.filter(function(n) {return n.label==val})[0]
+    if (!node){
+      console.log(val);
+      locate.center(1);
+    }else{
+      console.log(val);
+      locate.nodes(node.id);
+      //tooltips.open(node, config)  
+    }
+
+
+  }
+
+$("#searchinput").keydown(function(event) {
+    if (event.keyCode == 13)
+        search1(s,locate);
+});
+
+
+tooltips.bind('shown', function(event) {
+  console.log('tooltip shown', event);
+});
+
+tooltips.bind('hidden', function(event) {
+  console.log('tooltip hidden', event);
+});
+
+toggleDiv = function( id, status ) {
+      d = d3.select('div#'+id);
+      console.log( 'TOGGLE', id, d.attr('class'), '->', status );
+      if( status === undefined )
+        status = d.attr('class') == 'panel_on' ? 'off' : 'on';
+      d.attr( 'class', 'panel_' + status );
+      return false;
+    }
+
+function onlyUnique(value, index, self) { 
+    return self.indexOf(value) === index;
+}
+
+function zoomCenter () {
+  var loc = sigma.plugins.locate(s);
+  loc.center(1);
+};
+
+function allGood (param) {
+  var sPageURL = window.location.search.substring(1);
+  var sURLVariables = sPageURL.split('&');
+  for (var i = 0; i < sURLVariables.length; i++) 
+  {
+      var sParameterName = sURLVariables[i].split('=');
+      if (sParameterName[0] == param) 
+      {
+          return sParameterName[1];
+      }
+  }
+}
+
+function togglefav(element, name) {
+    $(element).find('i').toggleClass('fa-minus-circle fa-plus-circle');
+    if ($(element).find('i').hasClass('fa-minus-circle')) {
+      // Pushed the + button
+       if (fav_names.indexOf(name)==-1){
+          fav_names.push(name);
+        }
+    }
+    else{ // Pushed the - button
+      if (fav_names.indexOf(name)!=-1){
+          fav_names.pop(name);
+        }
+    }
+    console.log(fav_names);
+    console.log(allGood('assesment_id'))
+}
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+</script>
+</body>
+</html>
