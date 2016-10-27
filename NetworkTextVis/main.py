@@ -58,10 +58,13 @@ if __name__ == '__main__':
     G = read_network(config, scheme)
     docs, list_docs = gather_texts(G, config, scheme)
     vis_tasks = config.get('main', 'vis').split(',')
+    #print vis_tasks
+    #exit()
     for task in vis_tasks:
         logger.info('Executing task: %s' % task)
         execute_task(G, docs, list_docs, config, scheme, task)
-    logger.info('Finished in: %0.3f seconds!' % (time.time() - t0))
+        logger.info('Finished task %s in: %0.3f seconds!' % (task, time.time() - t0))
+    logger.info('Finished script in: %0.3f seconds!' % (time.time() - t0))
     #subprocess.Popen(['python', '-m', 'SimpleHTTPServer', '8000'], cwd='/media/kostas/DATA/GIT/NetworkTextVis/Visualization_Network/')
     #webbrowser.open_new_tab('http://0.0.0.0:8000/?assesment_id=reddit_try/')
 

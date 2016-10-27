@@ -2,6 +2,7 @@ import networkx as networkx
 import logging
 import json
 from bson.json_util import loads
+from visualizations import chord_diagram_create
 from text import update_graph_topics
 #from ranking import graph_influence
 import subprocess
@@ -114,17 +115,30 @@ def gather_texts(graph, config, scheme):
     else:
         for i in list(graph.nodes()):
             try:
+                #print "Posts"
                 #print graph.node[i][attribute]
+                #print "Inside of Posts"
                 #print loads(graph.node[i][attribute],strict=False)
-                documents.append(graph.node[i][text_field])
+                #print "Inside of Posts2"
+                posts = loads(graph.node[i][attribute],strict=False)[attribute]
+                concat_post = ''
+                tmp_doc = []
+                for p in posts:
+                    concat_post = concat_post + ' ' + p[text_field]
+                    tmp_doc.append(p[text_field])
+                documents.append(concat_post)
+                list_docs.append(tmp_doc)
             except Exception:
                 logger.warning('Node %s could not gather texts, due to parsing errors' % (str(graph.node[i][label])))
                 count_failed += 1
                 graph.remove_node(i)
-            list_docs = documents
+            #break
+            #list_docs = documents
     logger.info("Number of nodes with gathered texts: %i" % len(documents))
     if count_failed > 0 :
         logger.warning("Could not load: %i users!" % count_failed)
+    print len(documents)
+    #print documents
     return documents, list_docs
 
 
@@ -266,4 +280,6 @@ def execute_task(G, docs, list_docs, config, scheme, task):
 
     if task == 'network':
         network_create(G, docs, config)
+    elif task == 'chord':
+        chord_diagram_create(list_docs, config)
     return 0

@@ -137,14 +137,14 @@ def nfm_extraction(texts, config):
     #  LDA model
     #dictionary = gensim.corpora.Dictionary(texts)
     #corpus = [dictionary.doc2bow(text) for text in texts]
-    logger.info('Computing LDA topics...')
+    logger.info('Computing %i LDA topics...' % config.getint('topic', 'num_topics'))
     ldamodel = gensim.models.ldamodel.LdaModel(corpus,
-                                        num_topics=int(config.get('topic', 'num_topics')),
+                                        num_topics=config.getint('topic', 'num_topics'),
                                         id2word = dictionary,
-                                        update_every=int(config.get('topic', 'update_every')),
-                                        chunksize=int(config.get('topic', 'chunksize')),
-                                        passes=int(config.get('topic', 'passes')),
-                                        minimum_probability=float(config.get('topic', 'minimum_probability'))
+                                        update_every=config.getint('topic', 'update_every'),
+                                        chunksize=config.getint('topic', 'chunksize'),
+                                        passes=config.getint('topic', 'passes'),
+                                        minimum_probability=config.getfloat('topic', 'minimum_probability')
                                         )
     #ldamodel = models.ldamulticore.LdaMulticore(corpus,
     #                                        num_topics=config.NUMBER_OF_TOPICS,
