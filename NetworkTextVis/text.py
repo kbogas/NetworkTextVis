@@ -9,6 +9,7 @@ import logging
 from ranking import graph_influence
 
 
+
 logger = logging.getLogger('universal_logger')
 
 
@@ -146,6 +147,18 @@ def nfm_extraction(texts, config):
                                         passes=config.getint('topic', 'passes'),
                                         minimum_probability=config.getfloat('topic', 'minimum_probability')
                                         )
+
+    if config.getboolean('topic_vis', 'vis'):
+
+        import pyLDAvis.gensim
+        import pyLDAvis
+        dic1 = gensim.corpora.Dictionary.from_corpus(corpus, dictionary)
+        path_to_html = config.get('topic_vis', 'path_to_vis')
+        vis = pyLDAvis.gensim.prepare(ldamodel, corpus, dic1)
+        with open(path_to_html, 'w+') as outf:
+            pyLDAvis.save_html(vis, outf)
+        logger.info('Created Topic Visualization!')
+
     #ldamodel = models.ldamulticore.LdaMulticore(corpus,
     #                                        num_topics=config.NUMBER_OF_TOPICS,
     #                                        id2word = dictionary,

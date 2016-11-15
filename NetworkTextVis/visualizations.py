@@ -84,6 +84,7 @@ def chord_diagram_create(list_docs, config):
             for doc in named_entities:
                 if ent in doc and freq_names[j] in doc:
                     count_freq[i, j] += 1
+    frequencies = numpy.copy(count_freq)
     numpy.fill_diagonal(count_freq, 0)
     count_freq += count_freq.T
     if normalize_freq:
@@ -101,3 +102,20 @@ def chord_diagram_create(list_docs, config):
     with open(path_to_json, 'w+') as out_json:
         json.dump(count_freq.tolist(), out_json)
     logger.info('Created csv and json files for chord diagram!')
+
+    if config.getboolean('bubbles', 'create_bubbles'):
+        path_to_bubble_csv = config.get('bubbles', 'path_to_csv')
+        max_bubbles = config.getint('bubbles', 'max_bubbles')
+        if max_bubbles > len(found_entities):
+            max_bubbles = len(found_entities)
+        bubble_names = numpy.array(found_entities)[numpy.argsort(counter)[::-1][:max_bubbles]]
+        bubble_types = numpy.array(found_types)[numpy.argsort(counter)[::-1][:max_bubbles]]
+        counter2 = numpy.array(counter)[numpy.argsort(counter)[::-1][:max_bubbles]]
+        bubbles_list = [['id', 'total_amount', 'grant_title', 'group', 'start_year']]
+        print bubble_names.shape
+        for i in xrange(max_bubbles):
+            bubbles_list.append([i, counter2[i], bubble_names[i], bubble_types[i], bubble_types[i]])
+        with open(path_to_bubble_csv, 'w+') as out_b:
+            writer = csv.writer(out_b)
+            writer.writerows(bubbles_list)
+        logger.info('Created csv for bubbles diagram!')

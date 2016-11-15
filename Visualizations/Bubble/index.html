@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Bubble Chart of Named Entities</title>
+  <meta name="description" content="Bubble chart implementation in JS. Based on NYT visualization">
+  <meta name="author" content="Konstantinos Bougiatiotis. Taken byJim Vallandingham">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/bubble_chart.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Named Entities found in the collection</h1>
+    <p>Locations are colored <font color="#5d8aa8">blue</font>, People <font color="#e32636">red</font> and Organizations <font color="#4CA54C">green</font></p>
+    <div id="toolbar">
+      <a href="#" id="all" class="button active">All Named Entities</a>
+      <a href="#" id="year" class="button">Named Entities by Type</a>
+    </div>
+    <div id="vis"></div>
+
+    <div class="footer">
+      <p>A visualization of Named Entities in Bubble Chart, using D3.js</p>
+      <p><a href="http://vallandingham.me/bubble_charts_in_js.html">Taken from this blog post</a> | <a href="https://github.com/vlandham/bubble_chart">Code</a></p>
+    </div>
+  </div>
+
+  <script src="lib/d3.js"></script>
+  <script src="src/tooltip.js"></script>
+  <script src="src/bubble_chart.js"></script>
+
+
+</body>
+</html>

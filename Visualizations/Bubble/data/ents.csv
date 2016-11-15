@@ -1,0 +1,501 @@
+id,total_amount,grant_title,group,start_year
+0,8743,Syria,GPE,GPE
+1,3490,ISIS,ORG,ORG
+2,1791,Iraq,GPE,GPE
+3,1141,RT,ORG,ORG
+4,620,US,GPE,GPE
+5,594,Iran,GPE,GPE
+6,486,Aljazair Basmi Pimpinan Militan,ORG,ORG
+7,441,Malaysia,GPE,GPE
+8,405,U.S.,GPE,GPE
+9,395,India,GPE,GPE
+10,360,Damascus,GPE,GPE
+11,313,Mesir,PERSON,PERSON
+12,311,Palestin,GPE,GPE
+13,304,News,ORG,ORG
+14,301,Militer Aljazair,ORG,ORG
+15,281,UN,ORG,ORG
+16,250,FBI,ORG,ORG
+17,249,ISIS. Mereka,ORG,ORG
+18,229,U.S,GPE,GPE
+19,224,Assad,PERSON,PERSON
+20,217,Serangan Koalisi AS,ORG,ORG
+21,206,Reuters,ORG,ORG
+22,200,Islam,ORG,ORG
+23,190,Aleppo,GPE,GPE
+24,189,Idlib province,GPE,GPE
+25,185,Isis,PERSON,PERSON
+26,176,Israel,GPE,GPE
+27,153,DANGEROUS STEPS,ORG,ORG
+28,141,Memphis,GPE,GPE
+29,140,Mum,PERSON,PERSON
+30,137,Turkey,GPE,GPE
+31,130,Algeria,GPE,GPE
+32,120,State,ORG,ORG
+33,119,U.N.,ORG,ORG
+34,116,Isis Lee,PERSON,PERSON
+35,116,ISIS.,ORG,ORG
+36,112,Rough Rear Action,ORG,ORG
+37,110,First Time In,ORG,ORG
+38,106,Pakistan,GPE,GPE
+39,105,Ferguson,PERSON,PERSON
+40,101,Manhattan,GPE,GPE
+41,95,YPG,ORG,ORG
+42,94,Lebanon,GPE,GPE
+43,94,Til Hamis,GPE,GPE
+44,93,Penulis Jerman,ORG,ORG
+45,92,Kobani,PERSON,PERSON
+46,90,Egypt,GPE,GPE
+47,82,Al-Maliki,PERSON,PERSON
+48,78,Russia,GPE,GPE
+49,76,Gaza,GPE,GPE
+50,75,America,GPE,GPE
+51,70,Kuwait,GPE,GPE
+52,70,Amerika Serikat,PERSON,PERSON
+53,68,Heritage Sites Damaged,ORG,ORG
+54,66,CNN,ORG,ORG
+55,64,Jurgen Todenhofer,PERSON,PERSON
+56,62,Amnesty,ORG,ORG
+57,61,Jerman Juergen Todenhoefer,PERSON,PERSON
+58,59,Jack,PERSON,PERSON
+59,59,France,GPE,GPE
+60,56,Islamic State of Iraq,ORG,ORG
+61,56,Kota Mosul,PERSON,PERSON
+62,56,Jerman,ORG,ORG
+63,52,Seorang,ORG,ORG
+64,52,Jordan,GPE,GPE
+65,50,Jordan Bahrain Morocco,ORG,ORG
+66,50,Yezidi,ORG,ORG
+67,49,Bashar Assad's,PERSON,PERSON
+68,48,Taliban,ORG,ORG
+69,47,Haliburton,GPE,GPE
+70,47,GWBush,PERSON,PERSON
+71,46,Yarmouk,GPE,GPE
+72,45,Obama,ORG,ORG
+73,44,ISIS. Polisi,ORG,ORG
+74,44,Hanya Arab,ORG,ORG
+75,44,Juergen Todenhoefer,PERSON,PERSON
+76,43,Homs,GPE,GPE
+77,43,the Islamic State,ORG,ORG
+78,42,North Korea,GPE,GPE
+79,42,Indian Society,ORG,ORG
+80,42,Qatar,GPE,GPE
+81,41,Mosul,GPE,GPE
+82,41,Raqqa,GPE,GPE
+83,41,Fox,ORG,ORG
+84,40,Secular and,ORG,ORG
+85,40,Abu Quseyb,GPE,GPE
+86,40,&amp,ORG,ORG
+87,40,Jürgen Todenhöfer,PERSON,PERSON
+88,40,Mujeres y,ORG,ORG
+89,40,DANGEROUS STEPS ISIS,ORG,ORG
+90,40,Al-Azhar,PERSON,PERSON
+91,39,Hamas,ORG,ORG
+92,39,Lidia Herrera,PERSON,PERSON
+93,39,ABC,ORG,ORG
+94,38,Yazidi,GPE,GPE
+95,38,Kota Bogor Bima Arya Sugiarto,ORG,ORG
+96,36,Leia,PERSON,PERSON
+97,36,Canada,GPE,GPE
+98,36,Kobane,ORG,ORG
+99,35,Douma,GPE,GPE
+100,34,Serangan Udara Koalisi di Suriah,ORG,ORG
+101,34,Palestine,GPE,GPE
+102,33,@FIFPakistan,GPE,GPE
+103,32,Penyusup Ungkap Situasi Menegangkan,ORG,ORG
+104,32,Francisco,ORG,ORG
+105,32,Afghanistan,GPE,GPE
+106,30,China,GPE,GPE
+107,30,ISIS(Indian Secular Intellectuals Society,ORG,ORG
+108,30,BEIRUT,GPE,GPE
+109,29,Wali Kota Bogor Bima Arya Sugiarto,ORG,ORG
+110,29,Latina #,PERSON,PERSON
+111,28,Youssef Karwashan,PERSON,PERSON
+112,28,Kobanî,GPE,GPE
+113,27,Yemen,GPE,GPE
+114,26,FaceBook,ORG,ORG
+115,26,Amnesty International,ORG,ORG
+116,26,ISIS-Hölle,ORG,ORG
+117,26,Clinton,PERSON,PERSON
+118,26,Mother,PERSON,PERSON
+119,26,Libya,GPE,GPE
+120,25,Yazidis,PERSON,PERSON
+121,25,ISIS Selling Church Artifacts,ORG,ORG
+122,24,Sex- Sklavinnen,ORG,ORG
+123,24,UK,GPE,GPE
+124,24,Sinjar,ORG,ORG
+125,24,Fitna e Dajjal,ORG,ORG
+126,23,Demi Masuk ISIS,ORG,ORG
+127,23,SVBIED,ORG,ORG
+128,23,Yarmuk,GPE,GPE
+129,23,Sydney,GPE,GPE
+130,23,Warga Malaysia Rela Berutang,ORG,ORG
+131,23,Amnesty-Bericht - So,ORG,ORG
+132,22,TN.,GPE,GPE
+133,22,Bahrain,GPE,GPE
+134,22,Todenhöfer,PERSON,PERSON
+135,21,AFP,ORG,ORG
+136,21,Todenhoefer,PERSON,PERSON
+137,21,AP,ORG,ORG
+138,21,Raqqa City,GPE,GPE
+139,21,BBC,ORG,ORG
+140,21,Ukraine,GPE,GPE
+141,20,Italy,GPE,GPE
+142,20,Germany,GPE,GPE
+143,20,ANHA,ORG,ORG
+144,20,Qamislo,GPE,GPE
+145,20,al-Qaeda,ORG,ORG
+146,20,Matter of Time Before,ORG,ORG
+147,20,Al Qaeda,PERSON,PERSON
+148,19,CIA,ORG,ORG
+149,19,Ein Amnesty-International-Bericht,PERSON,PERSON
+150,19,Osama Bin Laden,PERSON,PERSON
+151,19,Sudan,GPE,GPE
+152,19,Google,ORG,ORG
+153,18,Brunette,PERSON,PERSON
+154,18,Peshawar,GPE,GPE
+155,18,Idlib,GPE,GPE
+156,17,World Heritage Sites,ORG,ORG
+157,17,Kobanê,ORG,ORG
+158,17,Putin,PERSON,PERSON
+159,16,Humankind,ORG,ORG
+160,16,Army,ORG,ORG
+161,16,Dhimmi,PERSON,PERSON
+162,16,ISIL,ORG,ORG
+163,16,Inilah Anggota Termuda ISIS,ORG,ORG
+164,16,Shingal,GPE,GPE
+165,16,Nigeria,GPE,GPE
+166,15,Singer Ana Stilwell,ORG,ORG
+167,15,Donetsk,PERSON,PERSON
+168,15,ALGIERS,ORG,ORG
+169,15,ANF,ORG,ORG
+170,15,Al Sarda,ORG,ORG
+171,14,Deir Ezzor,PERSON,PERSON
+172,14,Allah,GPE,GPE
+173,14,Caliphate,ORG,ORG
+174,14,Serangan Udara Koalisi di,ORG,ORG
+175,14,Own Foreign Fighters,ORG,ORG
+176,14,Todenhofer,GPE,GPE
+177,14,Usianya Baru 3,ORG,ORG
+178,14,Isis Valverde,ORG,ORG
+179,13,Regime War,ORG,ORG
+180,13,Birmingham,GPE,GPE
+181,13,Al Nour,PERSON,PERSON
+182,13,Facebook,ORG,ORG
+183,13,Muhammad,PERSON,PERSON
+184,13,google,ORG,ORG
+185,13,ISIS Rally,ORG,ORG
+186,13,SilkRoute,PERSON,PERSON
+187,13,London,GPE,GPE
+188,13,Tunisia,GPE,GPE
+189,12,James Foley,PERSON,PERSON
+190,12,Rouhani,PERSON,PERSON
+191,12,Task Force Denies,ORG,ORG
+192,12,Abu Jihad,PERSON,PERSON
+193,12,United States,GPE,GPE
+194,12,Abu Umar al-Shishani,PERSON,PERSON
+195,11,Erdogan,PERSON,PERSON
+196,11,SNHR.,ORG,ORG
+197,11,Basher al-Assad,PERSON,PERSON
+198,11,Matter of Time,ORG,ORG
+199,11,@RuthieGledhill,ORG,ORG
+200,11,Rural #,ORG,ORG
+201,11,Islamic State,ORG,ORG
+202,11,David Horowitz,PERSON,PERSON
+203,11,al-Waleed,GPE,GPE
+204,11,EU,ORG,ORG
+205,11,Bisa Hentikan,PERSON,PERSON
+206,11,IS.,ORG,ORG
+207,11,Times,ORG,ORG
+208,11,Dibombardir AS,ORG,ORG
+209,11,Singer Ana Stilwell's,ORG,ORG
+210,11,Barzani,PERSON,PERSON
+211,11,World Abdelmalek Gouri,ORG,ORG
+212,11,FBI Bulletin,ORG,ORG
+213,11,Abu Bakr,PERSON,PERSON
+214,10,Iran Boosts Military,ORG,ORG
+215,10,Eritrea,GPE,GPE
+216,10,Assad’s,GPE,GPE
+217,10,Farhatullah Babar,PERSON,PERSON
+218,10,Pentagon,ORG,ORG
+219,10,USA,GPE,GPE
+220,10,The Islamic State,ORG,ORG
+221,10,Bashar Al-Assad,PERSON,PERSON
+222,10,شهيداً في,ORG,ORG
+223,10,Burma,GPE,GPE
+224,10,Baiji,GPE,GPE
+225,10,Syria-,GPE,GPE
+226,10,@WHO,ORG,ORG
+227,10,@UNITAR,ORG,ORG
+228,10,Tikrit,GPE,GPE
+229,9,Ethiopia,GPE,GPE
+230,9,Arkansas,GPE,GPE
+231,9,@WwB_SAVE,ORG,ORG
+232,9,Oman,GPE,GPE
+233,9,Lebanon’s,ORG,ORG
+234,9,SOHR,ORG,ORG
+235,9,Asymmetric Cyberwar,PERSON,PERSON
+236,9,خبية، و,ORG,ORG
+237,9,Cuba,GPE,GPE
+238,9,ʻĀminah,PERSON,PERSON
+239,9,Discusses Time,PERSON,PERSON
+240,9,Blow,PERSON,PERSON
+241,9,Australia,GPE,GPE
+242,9,Indonesia,GPE,GPE
+243,9,Saudi Arabia,GPE,GPE
+244,9,Steven Sotloff,PERSON,PERSON
+245,9,Kurz Gesagt,PERSON,PERSON
+246,9,Coca-Cola,ORG,ORG
+247,8,Hitler,GPE,GPE
+248,8,Tlass,PERSON,PERSON
+249,8,Peter Kassig,PERSON,PERSON
+250,8,@nytimes,GPE,GPE
+251,8,UNHCR,ORG,ORG
+252,8,N-Syria,ORG,ORG
+253,8,Alan Henning,PERSON,PERSON
+254,8,IslamicState Forces,ORG,ORG
+255,8,MiddleEast &amp,GPE,GPE
+256,8,Texas,GPE,GPE
+257,8,Peter Townsend,PERSON,PERSON
+258,8,David Haines,PERSON,PERSON
+259,8,Algerian Army Kills ISIS Splinter Group Leader,ORG,ORG
+260,8,Ali Larijani,PERSON,PERSON
+261,8,Cairo,GPE,GPE
+262,8,Largest Religious Cleansing Campaign',ORG,ORG
+263,8,Busra al-Harir,PERSON,PERSON
+264,8,Avashin,PERSON,PERSON
+265,8,Irak,GPE,GPE
+266,8,AKP,ORG,ORG
+267,8,Zozan,PERSON,PERSON
+268,8,Toyota,ORG,ORG
+269,8,Wilaya Damishq,GPE,GPE
+270,8,Qalamoon,ORG,ORG
+271,8,Syria Jana al-Hariri,PERSON,PERSON
+272,8,Muhannad al-Ali,PERSON,PERSON
+273,7,ASHARQ AL-AWSAT,ORG,ORG
+274,7,ISIS Converts Churches,ORG,ORG
+275,7,Popular Reality TV Show Forces,ORG,ORG
+276,7,Sony,ORG,ORG
+277,7,Paddington Bear,ORG,ORG
+278,7,Hassakeh,GPE,GPE
+279,7,Maududi,PERSON,PERSON
+280,7,the United States,GPE,GPE
+281,7,SAA,ORG,ORG
+282,7,Serangan Udara Koalisi Tewaskan Lebih,ORG,ORG
+283,7,NSA,ORG,ORG
+284,7,Dabiq,ORG,ORG
+285,7,Ulama,ORG,ORG
+286,7,AssadCrimes @OSilent4,PERSON,PERSON
+287,7,Homs al-Waar,PERSON,PERSON
+288,7,Quran,PERSON,PERSON
+289,7,Baghdad,GPE,GPE
+290,7,Air Strikes,ORG,ORG
+291,7,Herve Gourdel,PERSON,PERSON
+292,7,Djurdjura,GPE,GPE
+293,7,Saraqeb,GPE,GPE
+294,7,NYPD,ORG,ORG
+295,7,@amnesty International,ORG,ORG
+296,7,Le,PERSON,PERSON
+297,7,Al Jazeera Channel -,ORG,ORG
+298,7,Jazeera Channel - قناة,PERSON,PERSON
+299,7,NYT,ORG,ORG
+300,7,REUTERS,ORG,ORG
+301,7,Kurdistan,GPE,GPE
+302,7,Umayyad Mosque #,ORG,ORG
+303,7,Jund al-Khilafah,PERSON,PERSON
+304,7,Amryah,GPE,GPE
+305,7,Abdel Nasser,PERSON,PERSON
+306,7,Inilah Kesaksian Wartawan Jerman,ORG,ORG
+307,7,Jamia Hafsa,GPE,GPE
+308,7,Getty,ORG,ORG
+309,7,Central Command,ORG,ORG
+310,7,Nir Rosen's,PERSON,PERSON
+311,7,KLIA. Mereka,ORG,ORG
+312,7,MAS,ORG,ORG
+313,6,the National Defense Forces,ORG,ORG
+314,6,Mother Whose 3-year-old,ORG,ORG
+315,6,Damascus Opera House,ORG,ORG
+316,6,The United Nations,ORG,ORG
+317,6,Ancona,ORG,ORG
+318,6,Kuwait Douglas A. Silliman,ORG,ORG
+319,6,Ano-Novo,PERSON,PERSON
+320,6,Daulah Islamiyyah,PERSON,PERSON
+321,6,Wilāyat,GPE,GPE
+322,6,Noura Dachan,PERSON,PERSON
+323,6,@BridgetMoreng,ORG,ORG
+324,6,Sovereign,ORG,ORG
+325,6,Το Ισραήλ,ORG,ORG
+326,6,@amnesty - #Iraq,ORG,ORG
+327,6,Warga Malaysia,PERSON,PERSON
+328,6,Yeni Hava Saldırısı,ORG,ORG
+329,6,Son Was Kidnapped,PERSON,PERSON
+330,6,Les,PERSON,PERSON
+331,6,Vietnam,GPE,GPE
+332,6,Lucas,PERSON,PERSON
+333,6,Isis Taylor,PERSON,PERSON
+334,6,AJ,GPE,GPE
+335,6,WATE 6,ORG,ORG
+336,6,Jelang Tahun Baru,PERSON,PERSON
+337,6,Isaiah 17:1,PERSON,PERSON
+338,6,Islamic State Fighters Love Nutella,ORG,ORG
+339,6,North,GPE,GPE
+340,6,DAMASCUS,GPE,GPE
+341,6,Kunjungi Wilayah ISIS,ORG,ORG
+342,6,@ecfr,ORG,ORG
+343,6,Update Shingal - #,PERSON,PERSON
+344,6,Saudi Holy Mosques Presidency,ORG,ORG
+345,6,Aussie,GPE,GPE
+346,6,Raqaa,GPE,GPE
+347,6,Al-Quran,PERSON,PERSON
+348,6,Heroic Man Purchases,PERSON,PERSON
+349,6,Amnistía Internacional,ORG,ORG
+350,6,Blitar,GPE,GPE
+351,6,UNOSAT,ORG,ORG
+352,6,dell,ORG,ORG
+353,5,Somalia,GPE,GPE
+354,5,ISIS Halalkan Perbudakan Seks,ORG,ORG
+355,5,Charles M…,PERSON,PERSON
+356,5,Tabung Kasih Ummah Syria,ORG,ORG
+357,5,Daraa,GPE,GPE
+358,5,En su,ORG,ORG
+359,5,Absurdes Kriegstheater,PERSON,PERSON
+360,5,NK,ORG,ORG
+361,5,@AFP,ORG,ORG
+362,5,Yarmouk Refugee Camp,GPE,GPE
+363,5,Cultural Heritage Sites,ORG,ORG
+364,5,Ransom,PERSON,PERSON
+365,5,Tabung,GPE,GPE
+366,5,SYRIA,ORG,ORG
+367,5,Jerusalem,GPE,GPE
+368,5,FBI Warns,ORG,ORG
+369,5,Aleppo - WHO,ORG,ORG
+370,5,NDF,ORG,ORG
+371,5,Undang-Undang,ORG,ORG
+372,5,New York,GPE,GPE
+373,5,Jabhat Al-Nusra,PERSON,PERSON
+374,5,Threatens Obama,PERSON,PERSON
+375,5,Aleppo Syria,GPE,GPE
+376,5,Beirut,GPE,GPE
+377,5,Sfoohin village,GPE,GPE
+378,5,Bunuh Diri Perempuan Yazidi,ORG,ORG
+379,5,Coke,ORG,ORG
+380,5,Kian Marak,PERSON,PERSON
+381,5,DANGEROUS,ORG,ORG
+382,5,Minneapolis,GPE,GPE
+383,5,Mare city,GPE,GPE
+384,5,@20committee,ORG,ORG
+385,5,The Weekly Standard,ORG,ORG
+386,5,ISIS Eyes Influence,ORG,ORG
+387,5,Kurt Nimmo,PERSON,PERSON
+388,5,Two Other Areas,ORG,ORG
+389,5,Begun,PERSON,PERSON
+390,5,ISIS Tebar Teror Bom,ORG,ORG
+391,5,GOP,ORG,ORG
+392,5,Syria Deadliest Country,ORG,ORG
+393,5,Great Umayyad Mosque,ORG,ORG
+394,5,Qamishli,GPE,GPE
+395,5,Jadi Budak Seks ISIS,PERSON,PERSON
+396,5,Great Umayyad Mosque of Aleppo,ORG,ORG
+397,5,Aljazair Basmi,PERSON,PERSON
+398,5,West Bank,GPE,GPE
+399,5,Graphic,ORG,ORG
+400,5,the Arab Spring,ORG,ORG
+401,5,Washington,GPE,GPE
+402,5,Algeria (,GPE,GPE
+403,5,Papa Francisco,GPE,GPE
+404,4,Ebola,GPE,GPE
+405,4,Via ShahidMF,PERSON,PERSON
+406,4,Catholic Archdiocese,ORG,ORG
+407,4,Abu Qasayib,PERSON,PERSON
+408,4,TweetMovie Watch,ORG,ORG
+409,4,Van Aartsen,PERSON,PERSON
+410,4,Kenya,GPE,GPE
+411,4,U.S Air,ORG,ORG
+412,4,Aleppo - Al-Bab,GPE,GPE
+413,4,Secular and Intellectual Society,ORG,ORG
+414,4,Indian Society @attomeybharti @sambitswaraj,ORG,ORG
+415,4,El Ejército,ORG,ORG
+416,4,CSTO,ORG,ORG
+417,4,Muhannad Al Ali,PERSON,PERSON
+418,4,Graham,PERSON,PERSON
+419,4,Online Privacy,PERSON,PERSON
+420,4,Qalamoun,PERSON,PERSON
+421,4,ISIS Mungkin Akan Serang AS,ORG,ORG
+422,4,Alexander Kinschaka,PERSON,PERSON
+423,4,Monitoring Group,ORG,ORG
+424,4,Сирии до,ORG,ORG
+425,4,Jabhat al-Nusra,PERSON,PERSON
+426,4,EL PASO,ORG,ORG
+427,4,TNT,ORG,ORG
+428,4,Mohammad al-Omar,PERSON,PERSON
+429,4,Hi…,ORG,ORG
+430,4,NP,ORG,ORG
+431,4,@justintrudeau,ORG,ORG
+432,4,Gukurahudi,PERSON,PERSON
+433,4,al-Aideen,ORG,ORG
+434,4,U,GPE,GPE
+435,4,al-Tharda,PERSON,PERSON
+436,4,Rojava @syriahr,PERSON,PERSON
+437,4,URGENTE,ORG,ORG
+438,4,Juergen Todenhoef,PERSON,PERSON
+439,4,Wartawan Jerman Publikasikan Tanda Jaminan Keamanan,ORG,ORG
+440,4,Hassan Abbas,PERSON,PERSON
+441,4,Usianya Baru 3 Tahun,ORG,ORG
+442,4,Şingal,GPE,GPE
+443,4,FBI Confirms,ORG,ORG
+444,4,WHO,ORG,ORG
+445,4,Syria’s Tragedy,ORG,ORG
+446,4,Jana Hariri,PERSON,PERSON
+447,4,MEMPHIS,GPE,GPE
+448,4,Chicoms,ORG,ORG
+449,4,NJ.,ORG,ORG
+450,4,Anggota Termuda ISIS,PERSON,PERSON
+451,4,NJ,GPE,GPE
+452,4,Age - http://t.co/Q7T7vmhUaM,ORG,ORG
+453,4,Osiris,GPE,GPE
+454,4,Iran Exclusive - Iran,PERSON,PERSON
+455,4,HOMS,ORG,ORG
+456,4,Kill Leader,PERSON,PERSON
+457,4,Estamos,ORG,ORG
+458,4,Til Maruf,GPE,GPE
+459,4,Syrien,GPE,GPE
+460,4,Al-Jaafari,PERSON,PERSON
+461,4,Beiji,PERSON,PERSON
+462,4,Qameshlo,GPE,GPE
+463,4,Kända,GPE,GPE
+464,4,facebook,ORG,ORG
+465,4,Sharpton,PERSON,PERSON
+466,4,Head,PERSON,PERSON
+467,4,Boko Haram,PERSON,PERSON
+468,4,Amnesty-International-Bericht,ORG,ORG
+469,4,Alfredo,PERSON,PERSON
+470,4,Eastern Ghouta #,ORG,ORG
+471,4,ISIS-Gewalt,ORG,ORG
+472,4,Maria Isis,PERSON,PERSON
+473,4,The Salafist Swine,ORG,ORG
+474,3,ReporT - Daily Times,ORG,ORG
+475,3,Dresden,GPE,GPE
+476,3,Bacon,PERSON,PERSON
+477,3,Cemil Bayik,ORG,ORG
+478,3,Palmyra,GPE,GPE
+479,3,PKK,ORG,ORG
+480,3,ISIS - time4 US2,ORG,ORG
+481,3,Minnesotan,GPE,GPE
+482,3,El,ORG,ORG
+483,3,Dan kita,PERSON,PERSON
+484,3,Blitar - Okezone,ORG,ORG
+485,3,NL,ORG,ORG
+486,3,David Platt,PERSON,PERSON
+487,3,Asma Assad,PERSON,PERSON
+488,3,बोला- खास,PERSON,PERSON
+489,3,Al Samwa,PERSON,PERSON
+490,3,Al-Bayan Radio,ORG,ORG
+491,3,Syria &amp,PERSON,PERSON
+492,3,Boston,GPE,GPE
+493,3,Mubasher,PERSON,PERSON
+494,3,Al-Jazeera,PERSON,PERSON
+495,3,UN Security Council,ORG,ORG
+496,3,Chile,GPE,GPE
+497,3,Crore,GPE,GPE
+498,3,Tennessee,GPE,GPE
+499,3,ISIS Committed First Beheading #,ORG,ORG

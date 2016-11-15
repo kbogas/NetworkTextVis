@@ -6,6 +6,7 @@ from visualizations import chord_diagram_create
 from text import update_graph_topics
 #from ranking import graph_influence
 import subprocess
+import pprint
 
 logger = logging.getLogger('universal_logger')
 
@@ -92,10 +93,12 @@ def gather_texts(graph, config, scheme):
     if not(gathered):
         for i in list(graph.nodes()):
             try:
+                #print graph.node[i].keys()
                 #print graph.node[i][attribute]
                 #print loads(graph.node[i][attribute],strict=False)
                 objects.append(loads(graph.node[i][attribute],strict=False))
-            except Exception:
+            except Exception, e:
+                pprint.pprint(e)
                 logger.warning('Node %s could not gather texts, due to parsing errors' % (str(graph.node[i][label])))
                 count_failed += 1
                 graph.remove_node(i)
@@ -117,17 +120,22 @@ def gather_texts(graph, config, scheme):
             try:
                 #print "Posts"
                 #print graph.node[i][attribute]
+                #break
                 #print "Inside of Posts"
                 #print loads(graph.node[i][attribute],strict=False)
                 #print "Inside of Posts2"
-                posts = loads(graph.node[i][attribute],strict=False)[attribute]
-                concat_post = ''
-                tmp_doc = []
-                for p in posts:
-                    concat_post = concat_post + ' ' + p[text_field]
-                    tmp_doc.append(p[text_field])
-                documents.append(concat_post)
-                list_docs.append(tmp_doc)
+                if text_field != attribute:
+                    posts = loads(graph.node[i][attribute],strict=False)[attribute]
+                    concat_post = ''
+                    tmp_doc = []
+                    for p in posts:
+                        concat_post = concat_post + ' ' + p[text_field]
+                        tmp_doc.append(p[text_field])
+                    documents.append(concat_post)
+                    list_docs.append(tmp_doc)
+                else:
+                    documents.append(graph.node[i][attribute])
+                    list_docs.append(graph.node[i][attribute])
             except Exception:
                 logger.warning('Node %s could not gather texts, due to parsing errors' % (str(graph.node[i][label])))
                 count_failed += 1
